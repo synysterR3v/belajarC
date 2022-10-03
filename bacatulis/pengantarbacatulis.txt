@@ -1,0 +1,17 @@
+Pengantar Baca-Tulis 
+Suatu program yang nilainya diberikan dengan assigment dan/atau konstanta, tidak akan dapat dijalankan untuk data lain tanpa mengubah programnya. Agar program dapat dijalankan dengan data yang berbeda tanpa mengubah program, data diberikan dari luar program dengan instruksi baca yaitu scanf dalam bahasa C, dengan menggunakan input standar.
+
+Seperti halnya pada printf di mana Anda harus mendefinisikan format output, untuk membaca suatu data diperlukan format input, yang pada umumnya sama dengan format output. Instruksi scanf juga harus disertai dengan %d %f %c sesuai dengan type data yang dibaca.
+
+Perbedaan antara instruksi membaca dan menulis adalah dari cara menuliskan nama variabel yang nilainya dibaca. Berikut ini contohnya:
+
+Untuk membaca nilai sebuah variabel integer bernama J, instruksinya adalah scanf (“%d”, &J);.
+Untuk membaca nilai sebuah variabel bilangan riil bernama X, instruksinya adalah scanf (“%f”, &X);.
+Untuk membaca nilai sebuah variabel bertype char bernama CX, instruksinya adalah scanf (“%c”, &CX);.
+Perhatikan tanda & sebelum nama variabel, yang harus dibaca dengan “address of”, merupakan salah satu operator bahasa C yang akan dijelaskan pada Modul 3. Address of artinya menunjukkan alamat dari variabelnya, misalnya &J artinya alamat dari variabel bernama J. 
+
+Untuk tahap awal ini, kalimat scanf (“%d”, &J); bermakna memberikan perintah kepada komputer, untuk menyimpan nilai yang diketikkan dengan format %d (semuanya angka) ke alamat memori yang oleh program dalam bahasa C dikenal melalui namanya yaitu variabel J. Tanpa menuliskan karakter & nilai yang diketikkan tidak akan disimpan. Hal ini akan dijelaskan lebih detail pada modul III. Untuk sementara ini, bagi pemula, harap diperhatikan pola penulisan instruksi baca yang diberikan, agar nilai yang dibaca dapat disimpan dengan benar pada variabel yang diberikan. 
+
+Nilai yang diketikkan harus sesuai dengan "format" dan type data saat nama variabel dideklarasikan:
+
+Untuk type data integer, "%d" artinya adalah bahwa program akan membaca data deretan bilangan saja, misalnya 12 sedangkan untuk "%f" program akan membaca sederetan angka yang boleh mengandung titik desimal 34.5 atau dalam format eksponen 3.5E+2 (artinya 350). Perhatikan batasan nilai yang dapat disimpan dalam type int dan float (baca spesifikasi bahasa C), biasanya integer terbatas dari -32768 s.d. 32767 sedangkan bilangan riil antara 10^-38 s.d 10^38. Beberapa varian dari bilangan bulat adalah short, long sedangkan varian bilangan riil adalah double.
