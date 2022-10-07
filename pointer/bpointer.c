@@ -1,10 +1,10 @@
-#include<stdio.h>
+#include <stdio.h>
+int main()
+{
+  int var = 5;
+  printf("var: %d\n", var);
 
-int x;
-int *ptr;
-
-ptr = &x;
-
-int main(){
-    printf(ptr);
+  // Notice the use of & before var
+  printf("address of var: %p", &var);  
+  return 0;
 }
