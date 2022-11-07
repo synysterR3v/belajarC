@@ -1,0 +1,61 @@
+.title {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+}
+
+.alamat {
+    text-align: center;
+}
+
+.pesan {
+    text-align: center;
+}
+
+.img {
+    text-align: center;
+}
+
+.form-container {
+    border-radius: 6px;
+    border: 1px solid;
+    margin: auto;
+    padding: 20px;
+    /* display: inline-block; */
+    /* width: 60%; */
+    /* align-content: center; */
+    /* background-color: azure; */
+    /* text-align: ; */
+    overflow: hidden;
+}
+.btn {
+    border-radius: 5px;
+    border: 1px;
+    background-color:aquamarine;
+    margin: auto;
+}
+
+.label {
+    display: inline-block;
+    margin: auto;
+    /* margin-right: 10px; */
+    padding: 5px 5px 5px 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.form-input {
+    border: 1 px solid;
+    text-align: center;
+    border-radius: 15px;
+    margin: auto;
+    display: inline-block;
+    width: auto;
+    padding: 4px 4px 4px 4px;
+}
+
+#ac #non-ac {
+    padding: 5px 5px 5px 5px;
+    margin-left: 5px;
+}

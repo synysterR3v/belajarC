@@ -1,12 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    <h1>HALLO</h1>
+    <!-- <form class="form-container" action="" method="post">
+        <div class="container">
+            <p>
+            <div class="title">
+                <h1>Data Pesanan</h1>
+            </div>
+            </p>
+            <p>
+            <div class="label">Nama Pelangggan </div>
+            <input type="text" class="form-input" placeholder="Masukan Nama Pelanggan" name="nm-pelanggan" id="nm-pelanggan">
+            </p>
+            <p>
+            <div class="label">Ruangan</div>
+            <input type="radio" name="ruangan" id="ac" value="1">&nbsp;AC
+            <input type="radio" name="ruangan" id="non-ac" value="0">&nbsp;Non AC
+            </p>
+            <p>
+            <div class="label">Nomor Meja</div>
+            <select class="form-input" name="nmr-meja" id="nmr-meja">
+                <option value="">-- Pilih Nomor Meja --</option>
+                <option value="no-meja"> 1 </option>
+                <option value="no-meja"> 2 </option>
+                <option value="no-meja"> 3 </option>
+                <option value="no-meja"> 4 </option>
+                <option value="no-meja"> 5 </option>
+                </p>
+                <br>
+                <p>
+                    <br>
+                    <div class="label">Menu Makanan</div>
+                <input class="makanan" type="radio" name="makanan" id="nasi" value="1">&nbsp;Nasi Goreng
+                <input class="makanan" type="radio" name="makanan" id="miegor" value="2">&nbsp;Mie Goreng
+                <input class="makanan" type="radio" name="makanan" id="mireb" value="3">&nbsp;Mie Rebus
+                <input class="makanan" type="radio" name="makanan" id="roti" value="4">&nbsp;Roti Bakar
+                <input class="makanan" type="radio" name="makanan" id="burjo" value="5">&nbsp;Bubur Kacang Ijo 
+                </p>
+                <br>
+                <p>
+                <div class="label">Menu Minuman</div>
+                <select class="form-input" name="menu-minuman" id="menu-minuman">
+                    <option value="">-- Pilih Minuman --</option>
+                    <option value="minuman"> Jus Buah </option>
+                    <option value="minuman"> kopi </option>
+                    <option value="minuman"> Teh Manis Panas/Dingin </option>
+                    <option value="minuman"> Capucino </option>
+                    <option value="minuman"> Es Kelapa </option>
+                    <option value="minuman"> Es Cincau </option>
+                    <option value="minuman"> Es Jeruk </option>
+                    </p>
+                    <br>
+                    <p>
+                    <div class="label">&nbsp;</div>
+                    <input class="btn" type="button" value="Buat Pesanan" onclick="validasi()">
+                    <input class="btn" type="button" value="Kembali Ke Beranda">
+                    </p>
+        </div>
+    </form> -->
+    <table class="form-container">
+        <div class="title">
+            <h1>Data Pesanan</h1>
+        </div>
+        <tr>
+            <th>
+                <div class="label">Nama Pelangggan </div>
+            </th>
+            <th><input type="text" class="form-input" placeholder="Masukan Nama Pelanggan" name="nm-pelanggan"
+                    id="nm-pelanggan"></th>
+        </tr>
+        <tr>
+            <th>
+                <div class="label">Ruangan</div>
+            </th>
+            <th><input type="radio" name="ruangan" id="ac" value="1">&nbsp;AC
+                <input type="radio" name="ruangan" id="non-ac" value="0">&nbsp;Non AC
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="label">Nomor Meja</div>
+            </th>
+            <th> <select class="form-input" name="nmr-meja" id="nmr-meja">
+                    <option value="">-- Pilih Nomor Meja --</option>
+                    <option value="no-meja"> 1 </option>
+                    <option value="no-meja"> 2 </option>
+                    <option value="no-meja"> 3 </option>
+                    <option value="no-meja"> 4 </option>
+                    <option value="no-meja"> 5 </option>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="label">Menu Makanan</div>
+            </th>
+            <th><input class="makanan" type="radio" name="makanan" id="nasi" value="1">&nbsp;Nasi Goreng
+                <input class="makanan" type="radio" name="makanan" id="miegor" value="2">&nbsp;Mie Goreng
+                <input class="makanan" type="radio" name="makanan" id="mireb" value="3">&nbsp;Mie Rebus
+                <input class="makanan" type="radio" name="makanan" id="roti" value="4">&nbsp;Roti Bakar
+                <input class="makanan" type="radio" name="makanan" id="burjo" value="5">&nbsp;Bubur Kacang Ijo
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="label">Menu Minuman</div>
+            </th>
+            <th><select class="form-input" name="menu-minuman" id="menu-minuman">
+                    <option value="">-- Pilih Minuman --</option>
+                    <option value="minuman"> Jus Buah </option>
+                    <option value="minuman"> kopi </option>
+                    <option value="minuman"> Teh Manis Panas/Dingin </option>
+                    <option value="minuman"> Capucino </option>
+                    <option value="minuman"> Es Kelapa </option>
+                    <option value="minuman"> Es Cincau </option>
+                    <option value="minuman"> Es Jeruk </option>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="label">&nbsp;</div>
+            </th>
+            <th><input class="btn" type="button" value="Buat Pesanan" onclick="validasi()">
+                <input class="btn" type="button" value="Kembali Ke Beranda">
+            </th>
+        </tr>
+    </table>
 </body>
+
 </html>
