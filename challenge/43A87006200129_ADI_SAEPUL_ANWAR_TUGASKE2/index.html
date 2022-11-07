@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Barang</title>
+</head>
+
+<body>
+    
+    <form class="form" id="form" action="" method="post">
+        <div class="forminput">
+            <div class="titleform">Form Master Barang</div>
+            <p>
+            <div class="label">Kode Barang</div>
+            <input class="inputForm" type="text" placeholder="Masukan Kode Barang*" name="kd-barang" id="kd-barang">
+            </p>
+            <p>
+            <div class="label">Nama Barang</div>
+            <input class="inputForm" type="text" placeholder="Masukan Nama Barang*" name="nm-barang" id="nm-barang">
+            </p>
+            <p>
+            <div class="label">Harga Barang</div>
+            <input class="inputForm" placeholder="Masukan Harga Barang*" type="text" name="hrg-barang" id="hrg-barang">
+            </p>
+            <p>
+                <div class="label">Jenis Barang</div>
+                <select class="inputForm" name="jns-barang" id="jns-barang">
+                    <option value="">-- Pilih Jenis Barang --</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Minuman">Minuman</option>
+                    <option value="Perlengkapan Rumah Tangga">Perlengkapan Rumah Tangga</option>
+                    <option value="Perlengkapan Mencuci">Perlengkapan Mencuci</option>
+                </select>
+            </p>
+            <p>
+            <div class="label">Status</div>
+            <input type="radio" name="status" id="aktif" value="1">&nbsp;Aktif
+            <input type="radio" name="status" id="td-aktif" value="0">&nbsp;Tidak Aktif
+            </p>
+            <p>
+            <div class="label">&nbsp;</div>
+            <input class="btn" type="button" value="Simpan" onclick="validasi()">
+            <input class="btn" type="reset" value="Batal">
+            </p>
+        </div>
+
+        <!-- <table>
+            <tr>
+                <td><div class="label">Kode Barang</div></td>
+                <td><input class="inputForm" type="text" placeholder="Masukan Kode Barang*" name="kd-barang" id="kd-barang"></td>
+            </tr>
+            <tr>
+                <td><div class="label">Kode Barang</div></td>
+                <td><input class="inputForm" type="text" placeholder="Masukan Kode Barang*" name="kd-barang" id="kd-barang"></td>
+            </tr>
+            <tr>
+                <td><div class="label">Kode Barang</div></td>
+                <td><select class="inputForm" name="jns-barang" id="jns-barang">
+                    <option value="">-- Pilih Jenis Barang --</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Minuman">Minuman</option>
+                    <option value="Perlengkapan Rumah Tangga">Perlengkapan Rumah Tangga</option>
+                    <option value="Perlengkapan Mencuci">Perlengkapan Mencuci</option>
+                </select></td>
+            </tr>
+        </table> -->
+    </form>
+
+</body>
+
+</html>
