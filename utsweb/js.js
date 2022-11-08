@@ -87,7 +87,6 @@ function pesanan(nm_pelanggan, ruangan, nmr_meja, menu_makanan, menu_minuman) {
     hasil = hasil + "Menu Makanan   \t: " + menu_makanan + "\n";
     hasil = hasil + "Menu Minuman   \t: " + menu_minuman + "\n";
 
-
     alert(hasil);
 
 }
