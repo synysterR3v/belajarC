@@ -8,7 +8,7 @@ function validasi() {
     var nmr_meja = document.getElementById('nmr-meja');
     var menu_makanan = document.getElementsByName('makanan');
     var menu_minuman = document.getElementById('menu-minuman');
-    
+
     // alert(nm_pelanggan.value)
 
     if (nm_pelanggan.value == "") {
@@ -16,19 +16,34 @@ function validasi() {
         return false
     }
 
-    if (ruangan.value == "") {
-        alert("Pilih Jenis Ruangan !")
-        return false
+    var room = 0;
+    for (var i = 0, length = ruangan.length; i < length; i++) {
+        if (ruangan[i].checked == null) {
+            alert("Ruangan Harus Dipilih !")
+            return false;
+        }
+        if (ruangan[i].checked) {
+            room = ruangan[i].value;
+            break;
+        }
     }
-
+    
     if (nmr_meja.value == "") {
         alert("Pilih No Meja !")
         return false
     }
-    
-    if (menu_makanan.value == "") {
-        alert("Pilih Makanan !")
-        return false
+
+    var food = 0;
+    for (var i = 0, length = menu_makanan.length; i < length; i++) {
+        if (menu_makanan[i].checked == null) {
+            alert("Kamu Jadi Makan ?")
+            alert("Pilih Makanannya dulu Bro!")
+            return 0;
+        }
+        if (menu_makanan[i].checked) {
+            food = menu_makanan[i].value;
+            break;
+        }
     }
 
     if (menu_minuman.value == "") {
@@ -36,61 +51,44 @@ function validasi() {
         return false
     }
 
+    ruangan = (room == 1) ? "AC" : "Non AC";
 
-    var room = 0;
-    for (var i = 0, length = ruangan.length; i < length; i++) {
-        if (ruangan[i].checked) {
-            room = ruangan[i].value;
-            break;
-        }
+    if (food == 1) {
+        menu_makanan ="Nasi Goreng";
+    }
+    else if (food == 2) {
+        menu_makanan="Mie Goreng";
+    }
+    else if (food == 3) {
+        menu_makanan = "Mie Rebus";
+    }
+    else if (food == 4) {
+        menu_makanan ="Roti Bakar";
+    }
+    else if (food == 5) {
+        menu_makanan = "Bubur Kacang Ijo";
     }
 
-    var food = 0;
-    for (var i = 0, length = menu_makanan.length; i < length; i++) {
-        if (menu_makanan[i].checked) {
-            food = menu_makanan[i].value;
-            break;
-        }
-    }
+    // alert(menu_makanan);
 
-    ruangan = (food == 1) ? "AC" : "Non AC";
+    
+    pesanan(nm_pelanggan.value, ruangan, nmr_meja.value, menu_makanan, menu_minuman.value)
 
-    //alert(ruangan);
-
-    if (menu_makanan == 1) {
-        alert("Nasi Goreng");
-    } 
-    else if (menu_makanan == 2){
-        alert("Mie Goreng");        
-    }
-    else if (menu_makanan == 3){
-        alert("Mie Rebus");        
-    }
-    else if (menu_makanan == 4){
-        alert("Roti Bakar");        
-    }
-    else if (menu_makanan == 5){
-        alert("Bubur Kacang Ijo");        
-    }
-
-    alert(nm_pelanggan.value, ruangan.value, nmr_meja.value, menu_makanan.value, menu_minuman.value)
     
 
-    // hasil(nm_pelanggan.value, ruangan, menu_makanan)
-   
 }
 
-// function hasilInput(kd_barang, nm_barang, hrg_barang, jns_barang, aktifNo) {
-//     var hasil = "Data Barang\n\n";
+function pesanan(nm_pelanggan, ruangan, nmr_meja, menu_makanan, menu_minuman) {
+    var hasil = "Data Pesanan\n\n";
 
-//     hasil = hasil + "Kode Barang : " + kd_barang + "\n";
-//     hasil = hasil + "Nama Barang : " + nm_barang + "\n";
-//     hasil = hasil + "Harga Barang : " + hrg_barang + "\n";
-//     hasil = hasil + "Jenis Barang : " + jns_barang + "\n";
-//     hasil = hasil + "Status Barang : " + aktifNo + "\n";
+    hasil = hasil + "Nama Pelanggan \t: " + nm_pelanggan + "\n";
+    hasil = hasil + "Jenis Ruangan  \t: " + ruangan + "\n";
+    hasil = hasil + "Nomor Meja     \t: " + nmr_meja + "\n";
+    hasil = hasil + "Menu Makanan   \t: " + menu_makanan + "\n";
+    hasil = hasil + "Menu Minuman   \t: " + menu_minuman + "\n";
 
 
-//     alert(hasil);
-   
-// }
+    alert(hasil);
+
+}
 
