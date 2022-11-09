@@ -18,7 +18,7 @@ function validasi() {
 
     var room = 0;
     for (var i = 0, length = ruangan.length; i < length; i++) {
-        if (ruangan[i].checked == null) {
+        if (ruangan[i].checked == "") {
             alert("Ruangan Harus Dipilih !")
             return false;
         }
@@ -35,7 +35,7 @@ function validasi() {
 
     var food = 0;
     for (var i = 0, length = menu_makanan.length; i < length; i++) {
-        if (menu_makanan[i].checked == null) {
+        if (menu_makanan[i].checked == "") {
             alert("Kamu Jadi Makan ?")
             alert("Pilih Makanannya dulu Bro!")
             return 0;
@@ -70,7 +70,7 @@ function validasi() {
     }
 
     // alert(menu_makanan);
-
+    // alert(ruangan);
     
     pesanan(nm_pelanggan.value, ruangan, nmr_meja.value, menu_makanan, menu_minuman.value)
 
