@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../xampp/htdocs/sisfo_mahasiswa"
+		},
+		{
+			"path": "ci_latihanIDS"
+		},
+		{
+			"path": "ci_latihanUR"
+		}
+	],
+	"settings": {}
+}
