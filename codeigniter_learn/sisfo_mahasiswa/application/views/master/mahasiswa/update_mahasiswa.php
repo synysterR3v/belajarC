@@ -42,7 +42,7 @@
 					<td>JURUSAN</td>
 					<!-- <td><input type="text" name="jurusan" id="jurusan" placeholder="Pilih Jurusan"></td> -->
 					<td><select class="" name="jurusan" id="jurusan" >
-                <option value="">-- Pilih Jurusan --</option>
+                <option value=""><?php echo (count($data_mahasiswa) > 0)? $data_mahasiswa[0]->jurusan : "";?></option>
                 <option value="Management Informatika"> Management Informatika </option>
                 <option value="Teknik Komputer"> Teknik Komputer </option>
                 <option value="Sistem Informasi"> Sistem Informasi </option>
@@ -52,23 +52,25 @@
 					<td>SEMESTER</td>
 					<!-- <td><input type="text" name="semester" id="semester" placeholder="Pilih Semester"></td> -->
 					<td><select class="" name="semester" id="semester" >
-                <option value=""><?php echo (count($data_mahasiswa) > 0)? $data_mahasiswa[0]->semester : "-- Pilih Semester --";?></option>
-                <option value="1"> 1 </option>
-                <option value="2"> 2 </option>
-                <option value="3"> 3 </option>
-                <option value="4"> 4 </option>
-                <option value="5"> 5 </option>
-				<option value="6"> 6 </option>
-                <option value="7"> 7 </option>
-                <option value="8"> 8 </option>
+					<?php foreach ($semester as $s) : ?>
+                                <?php if ($s == $semester['semester']) : ?>
+                                    <option value="<?= $s; ?>" selected><?= $s; ?></option>
+                                <?php else : ?>
+                                    <option value="<?= $s; ?>"><?= $s; ?></option>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+							
             </td>
+			
 				</tr>
+				
 				<tr>
 					<td>STATUS</td>
 					<!-- <td><input type="text" name="status" id="status"></td> -->
 					<td>
-					<input class="status" type="radio" name="status" id="aktif" value="Aktif">&nbsp;Aktif
-                	<input class="status" type="radio" name="status" id="tidak_aktif" value="Tidak Aktif">&nbsp;Tidak Aktif
+					<!-- <input class="status" type="radio" name="status" id="aktif" value="">&nbsp;Aktif -->
+					<input class="status" type="radio" name="status" id="aktif" value="<?php echo (count($data_mahasiswa) > 0)? $data_mahasiswa[0]->status : "";?>">&nbsp;Aktif
+                	<input class="status" type="radio" name="status" id="tidak_aktif" value="<?php echo (count($data_mahasiswa) > 0)? $data_mahasiswa[0]->status : "";?>">&nbsp;Tidak Aktif
 					</td>
                 	
 				</tr>

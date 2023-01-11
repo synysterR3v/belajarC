@@ -36,7 +36,7 @@
 					<td><?php echo $mahasiswa->semester;?></td>
 					<td><?php echo $mahasiswa->status;?></td>
 					<td>
-						<a href="">[Ubah Data]</a>
+						<a href="<?php echo base_url('index.php/mahasiswa/ubah_data/').$mahasiswa->id;?>">[Ubah Data]</a>
 						&nbsp;
 						<a href="#" onclick="hapusData('<?php echo $mahasiswa->id;?>')">[Hapus Data]</a>
 					</td>
